@@ -53,7 +53,7 @@ WhisperAI::WhisperAI(UBinModelAsset* model, int threads) {
     _setThreads = GetFunction<SetThreadsFunction>("setThreads");
     _setLanguage = GetFunction<SetLanguageFunction>("setLanguage");
     _setTranslate = GetFunction<SetTranslateFunction>("setTranslate");
-    _transcribe = GetFunction<TranscribeFunction>("Transcrible");
+    _transcribe = GetFunction<TranscribeFunction>("Transcribe");
 
     FString path = FPaths::ProjectDir() / model->FilePath;
     ctx = _init(TCHAR_TO_UTF8(*path), threads);
